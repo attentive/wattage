@@ -12,5 +12,5 @@
 (om/root views/tags-view data/APP
   {:target (gdom/getElement "tags")})
 
-(om/root views/tags-view data/APP
-  {:target (gdom/getElement "tags2")})
+;(om/root views/tags-view data/APP
+;  {:target (gdom/getElement "second-tags")})

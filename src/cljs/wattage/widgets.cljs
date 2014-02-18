@@ -16,6 +16,7 @@
   (cb text))
 
 (defn editable [data owner {:keys [edit-key on-edit] :as opts}]
+  "Renders a text field editable by use of an Edit button at right."
   (reify
     om/IInitState
     (init-state [_]
@@ -36,6 +37,7 @@
                            (when (om/get-state owner :editing)
                              (end-edit text owner on-edit)))})
           (dom/button
-            #js {:style (display (not editing))
+            #js {:className "btn" ; Bootstrap
+                 :style (display (not editing))
                  :onClick #(om/set-state! owner :editing true)}
             "Edit"))))))

@@ -31,4 +31,5 @@
     om/IRender
     (render [_]
       (dom/div #js {:id "tags"} ; NB hard-coded ID here—would need to parameterise to have multiple?
-        (apply dom/ul nil (om/build-all tag-view (data/tag-data app)))))))
+        ;(apply dom/ul nil
+        (apply dom/div nil (om/build-all tag-view (data/tag-data app)))))))
