@@ -1,0 +1,10 @@
+goog.addDependency("base.js", ['goog'], []);
+goog.addDependency("../cljs/core.js", ['cljs.core'], ['goog.string', 'goog.array', 'goog.object', 'goog.string.StringBuffer']);
+goog.addDependency("../om/dom.js", ['om.dom'], ['cljs.core']);
+goog.addDependency("../om/core.js", ['om.core'], ['cljs.core', 'om.dom']);
+goog.addDependency("../cljs/reader.js", ['cljs.reader'], ['cljs.core', 'goog.string']);
+goog.addDependency("../wattage/widgets.js", ['wattage.widgets'], ['cljs.core', 'om.core', 'om.dom', 'cljs.reader']);
+goog.addDependency("../clojure/string.js", ['clojure.string'], ['cljs.core', 'goog.string', 'goog.string.StringBuffer']);
+goog.addDependency("../wattage/data.js", ['wattage.data'], ['cljs.core', 'goog.events.EventType', 'om.core', 'clojure.string', 'cljs.reader', 'goog.net.XhrIo', 'goog.events']);
+goog.addDependency("../wattage/views.js", ['wattage.views'], ['cljs.core', 'om.core', 'wattage.widgets', 'om.dom', 'cljs.reader', 'wattage.data']);
+goog.addDependency("../wattage/core.js", ['wattage.core'], ['cljs.core', 'goog.dom', 'om.core', 'wattage.views', 'wattage.data']);
